@@ -76,8 +76,8 @@ const React = (function () {
         ? !depArray.every((el, i) => el === deps[i])
         : true;
       if (hasNoDeps || hasChangedDeps) {
-        callback();
         hooks[currentIndex] = depArray;
+        callback();
       }
       currentIndex++;
     },
